@@ -12,7 +12,7 @@ renamed as (
 
     select
         date_date,
-        concat(orders_id,"-",pdt_id) as surrogate_key,
+        concat(orders_id,'-',pdt_id) as surrogate_key,
         orders_id,
         pdt_id as products_id,
         revenue,
