@@ -9,4 +9,5 @@ select
     ROUND(SUM(margin.purchase_cost),2) as purchase_cost,
     ROUND(SUM(margin.margin),2) as margin
     from margin
+    where orders_id = 1002561
     group by orders_id, date_date
