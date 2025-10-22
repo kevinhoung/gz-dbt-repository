@@ -14,4 +14,6 @@ joinedtable as (
     left join product
     USING(products_id)
 )
-select * from joinedtable
+select *,
+    revenue - purchase_cost as margin
+    from joinedtable
