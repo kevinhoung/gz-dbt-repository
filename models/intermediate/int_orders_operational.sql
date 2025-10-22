@@ -23,5 +23,4 @@ select
     SUM(ship_cost) as ship_cost,
     SUM(margin + shipping_fee - logcost - ship_cost) as operational_margin
     from joinedtable
-    where orders_id = 1002561
     GROUP BY orders_id, date_date
