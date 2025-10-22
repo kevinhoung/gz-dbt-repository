@@ -1,0 +1,17 @@
+# schema.yml
+
+version: 2
+
+sources:
+  - name: gz_raw_data
+    description: DBT Day 1
+    tables: 
+      - name: sales
+        identifier: raw_gz_sales
+        description: pk product ID, purchase price
+      - name: product
+        identifier: raw_gz_product
+        description: pk order ID, revenue, qty
+      - name: ship
+        identifier: raw_gz_ship
+        description: pk order ID, shipping fee, shipping fee 1, logcost, ship_cost
