@@ -17,7 +17,10 @@ joinedtable as (
 select
     orders_id as orders_id,
     date_date as date_date,
+    SUM(revenue) as revenue,
+    SUM(purchase_cost) as purchase_cost,
     SUM(margin) as margin,
+    SUM(quantity) as quantity,
     SUM(shipping_fee) as shipping_fee,
     SUM(logcost) as log_cost,
     SUM(ship_cost) as ship_cost,
