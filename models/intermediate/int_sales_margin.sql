@@ -9,7 +9,8 @@ product as (
 joinedtable as (
     select
         sales.*,
-        product.purchase_price as purchase_cost
+        product.purchase_price,
+        product.purchase_price * sales.quantity as purchase_cost
         from sales
     left join product
     USING(products_id)
