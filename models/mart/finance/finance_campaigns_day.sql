@@ -28,3 +28,4 @@ select
     SUM(total_ship_cost) as ship_cost
     from financemarketingcombine
 group by date_date
+order by date_date
