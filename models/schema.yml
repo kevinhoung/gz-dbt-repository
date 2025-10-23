@@ -1,0 +1,39 @@
+# schema.yml
+
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: DBT Day 1
+    tables: 
+      - name: sales
+        identifier: raw_gz_sales
+        description: pk product_id, purchase_price, we have 16740 distinct product_ids
+        tests:
+          - unique:
+              column_name: "(orders_id || '-' || pdt_id)"
+        # freshness testing
+        loaded_at_field: "CAST(date_date AS TIMESTAMP)"
+        freshness:
+          warn_after: {count: 90, period: day}
+        
+        columns:
+          - name: date_date
+            description: date of purchase
+      - name: product
+        identifier: raw_gz_product
+        description: pk product_id, revenue, qty, 167551 distinct order ids, 16738 distinct product ids
+        tests:
+          - unique:
+              column_name: products_id
+          - not_null:
+              column_name: products_id
+      - name: ship
+        identifier: raw_gz_ship
+        description: pk orders_id, shipping fee, shipping fee 1, logcost, ship_cost, 167552 distinct order IDS
+        tests:
+          - unique:
+              column_name: orders_id
+          - not_null:
+              column_name: orders_id
