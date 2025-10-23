@@ -6,5 +6,5 @@ profile: 'default'
 
 models:
   gz_dbt_repository:
-    mart:
+    staging:
       +materialized: table
