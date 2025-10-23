@@ -37,3 +37,15 @@ sources:
               column_name: orders_id
           - not_null:
               column_name: orders_id
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: pk campaign_key, should rename camPGN_name column
+      - name: bing
+        identifier: raw_gz_bing
+        description: pk campaign_key, should rename camPGN_name column
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: pk campaign_key, should rename camPGN_name column
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: pk campaign_key, should rename camPGN_name column
