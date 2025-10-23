@@ -1,7 +1,3 @@
--- materialization of table
-
-{{ config( materialized = 'view')}}
-
 -- finance report operations
 
 with op_orders as (
