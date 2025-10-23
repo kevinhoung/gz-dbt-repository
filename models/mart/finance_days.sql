@@ -1,6 +1,6 @@
 -- materialization of table
 
-{{ config( materialized = 'table')}}
+--{{ config( materialized = 'table')}}
 
 -- finance report operations
 
