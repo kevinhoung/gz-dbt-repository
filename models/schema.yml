@@ -61,9 +61,10 @@ sources:
         tests:
           - unique:
               column_name: "(date_date || '-' || paid_source || '-' || campaign_key)"
-      - name: daily_marketing_report
-        identifier: int_campaigns_day
-        description: aggregated int_campaigns by day
-        tests:
-          - unique:
-              column_name: "(date_date)"
+models:
+  - name: daily_marketing_report
+    identifier: int_campaigns_day
+    description: aggregated int_campaigns by day
+    tests:
+      - unique:
+          column_name: "(date_date)"
