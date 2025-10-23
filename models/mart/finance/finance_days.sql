@@ -11,6 +11,7 @@ select
     ROUND(SUM(operational_margin),2) as op_margin,
     ROUND(SUM(purchase_cost),2) as total_purchase_cost,
     ROUND(SUM(shipping_fee),2) as total_shipping_fee,
+    ROUND(SUM(ship_cost),2) as total_ship_cost,
     ROUND(SUM(log_cost),2) as total_log_cost,
     ROUND(SUM(quantity),2) as quantity_sold
     from op_orders
