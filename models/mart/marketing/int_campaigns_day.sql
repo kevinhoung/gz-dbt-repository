@@ -5,3 +5,4 @@ select
     SUM(click) as click
     from {{ref('int_campaigns')}}
 group by date_date
+order by date_date DESC
