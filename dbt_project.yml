@@ -1,10 +1,10 @@
 # dbt_project.yml
-name: 'gz-dbt-repository'
+name: 'gz_dbt_repository'
 version: '1.0.0'
 config-version: 2
 profile: 'default'
 
 models:
-  gz-dbt-repository:
+  gz_dbt_repository:
     mart:
       +materialized: table
