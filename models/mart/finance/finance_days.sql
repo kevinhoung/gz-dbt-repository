@@ -8,7 +8,7 @@ select
     COUNT(orders_id) as nb_transactions,
     ROUND(SUM(revenue),2) as revenue,
     ROUND(SUM(revenue) / COUNT(orders_id),2) as average_basket,
-    ROUND(AVG(operational_margin),2) as avg_op_margin,
+    ROUND(SUM(operational_margin),2) as op_margin,
     ROUND(SUM(purchase_cost),2) as total_purchase_cost,
     ROUND(SUM(shipping_fee),2) as total_shipping_fee,
     ROUND(SUM(log_cost),2) as total_log_cost,
