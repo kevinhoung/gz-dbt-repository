@@ -15,6 +15,15 @@ joinedtable as (
     left join product
     USING(products_id)
 )
-select *,
-    revenue - purchase_cost as margin
+select
+    date_date,
+    surrogate_key,
+    orders_id,
+    products_id,
+    revenue,
+    quantity,
+    purchase_price,
+    purchase_cost,
+    revenue - purchase_cost as margin,
+    {{ margin_percent('revenue', 'purchase_cost') }} as margin_percent
     from joinedtable

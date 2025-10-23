@@ -37,3 +37,35 @@ sources:
               column_name: orders_id
           - not_null:
               column_name: orders_id
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: pk campaign_key, should rename camPGN_name column
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || paid_source || '-' || campaign_key)"
+      - name: bing
+        identifier: raw_gz_bing
+        description: pk campaign_key, should rename camPGN_name column
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || paid_source || '-' || campaign_key)"
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: pk campaign_key, should rename camPGN_name column
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || paid_source || '-' || campaign_key)"
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: pk campaign_key, should rename camPGN_name column
+        tests:
+          - unique:
+              column_name: "(date_date || '-' || paid_source || '-' || campaign_key)"
+models:
+  - name: int_campaigns_day
+    description: aggregated int_campaigns by day
+    tests:
+      - unique:
+          column_name: (date_date)
+      - not_null:
+          column_name: (date_date)

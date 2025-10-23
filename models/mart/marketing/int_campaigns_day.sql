@@ -1,0 +1,8 @@
+select
+    date_date as date_date,
+    SUM(ads_cost) as ads_cost,
+    SUM(impression) as impression,
+    SUM(click) as click
+    from {{ref('int_campaigns')}}
+group by date_date
+order by date_date asc
