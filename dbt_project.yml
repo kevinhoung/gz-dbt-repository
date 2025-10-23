@@ -13,7 +13,7 @@ config-version: 2
 # using the `{{ config(...) }}` macro.
 
 models:
-  dbt_challenges:
+  gz_dbt_repository:
     # Applies to all files under models/example/
     staging:
       +materialized: table
